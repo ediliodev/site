@@ -1,14 +1,34 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+#DOCUMENTACION DE DIGITALOCEAN TEST TED
+
+#set :application, "my_app_name"
+#set :repo_url, "git@example.com:me/my_repo.git"
+#set :deploy_to, '/home/deploy/my_app_name'
+#append :linked_files, "config/database.yml", "config/secrets.yml"
+#append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+
+
+
+
+# config valid only for current version of Capistrano
+lock '3.10.2'
+
+set :application, 'site'
+set :repo_url, 'https://github.com/ediliodev/site.git'
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/deploy/site'
+
+
+append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+
+
 
 # Default value for :scm is :git
 # set :scm, :git
