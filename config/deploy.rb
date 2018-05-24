@@ -15,7 +15,7 @@ lock '3.10.2'
 
 set :application, 'site'
 set :repo_url, 'https://github.com/ediliodev/site.git'
-
+set :passenger_restart_with_touch, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
