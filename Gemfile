@@ -11,7 +11,9 @@ gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
 
 #gem 'pg', '>= 0.18', '< 2.0'
- gem  'pg', '1.0.0' 
+#gem 'sqlite3' # agregada por ted para desarollo. Pruebas local.
+
+gem  'pg', '1.0.0' 
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -36,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'spree', '~> 3.4.4'
+gem 'spree_auth_devise', '~> 3.3'
+gem 'spree_gateway', '~> 3.3'
 
 
 
@@ -46,14 +51,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  gem 'capistrano', '~> 3.7', '>= 3.7.1'
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-rbenv', '~> 2.1'       # Add this if you're using rbenv
+  gem 'capistrano-passenger', '~> 0.2.0'
+
   
-
-gem 'capistrano', '~> 3.7', '>= 3.7.1'
-gem 'capistrano-rails', '~> 1.2'
-gem 'capistrano-rbenv', '~> 2.1'
-gem 'capistrano-passenger', '~> 0.2.0'
-
-# Add this if you're using rbenv
 end
 
 group :development do
